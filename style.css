@@ -1,4 +1,7 @@
+/* Google Fonts Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Storing colours in variables */
 :root {
   --background: #23262f;
   --highlight: #abc241;
@@ -7,18 +10,23 @@
   --secondary: #33546f;
 }
 
+/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+/* Each section takes up the whole screen */
 section {
   height: 100vh;
   width: 100vw;
   background-color: var(--background);
   border: 1px solid red;
 }
+
+/* The navbar sticks to the top of the screen */
 nav {
   border: 1px solid red;
   padding: 10px 50px;
@@ -27,6 +35,8 @@ nav {
   top: 0;
   z-index: 1000;
 }
+
+/* Grid background container */
 .grid-background {
   position: relative;
   height: 100%;
@@ -34,15 +44,22 @@ nav {
   background-color: var(--background);
 }
 
+/* The Grid */
 .grid-background > div {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   top: 0;
+  /* This renders a bunch of squares as a background */
   background-image: linear-gradient(to right, #aac2412f 1px, transparent 1px),
     linear-gradient(to bottom, #aac2412f 1px, transparent 1px);
+  /* This is the size of the squares */
   background-size: 14px 24px;
+
+  /* This extra part masks the top half of the screen into a half cirlce such that 
+  only the top half of the squares are visible
+  */
   -webkit-mask-image: radial-gradient(
     ellipse 60% 50% at 50% 0,
     #000 70%,
