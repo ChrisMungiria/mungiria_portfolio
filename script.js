@@ -50,3 +50,10 @@ window.addEventListener("scroll", function () {
     navbar.style.backdropFilter = "none";
   }
 });
+
+// Scroll to tech stacks when clicked on the button
+document
+  .querySelector(".arrow-container")
+  .addEventListener("click", function () {
+    document.querySelector("#stacks").scrollIntoView({ behavior: "smooth" });
+  });
