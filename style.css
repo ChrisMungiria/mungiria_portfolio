@@ -295,6 +295,73 @@ section#about > p > span {
   animation: bounce 1s infinite;
 }
 
+/* Tech Stacks Section */
+
+section#stacks {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  position: relative;
+}
+section#stacks > h1 {
+  font-size: 64px;
+  color: var(--grey);
+}
+section#stacks > h1 > span {
+  color: var(--highlight);
+}
+
+.stacks-container {
+  display: flex;
+  height: 100%;
+}
+
+.stack-names {
+  flex: 1;
+  display: flex;
+}
+
+.stack-desc {
+  flex: 2;
+  padding: 20px;
+}
+.progress {
+  height: 100%;
+  width: 10px;
+  background-color: var(--darkgrey);
+  border-radius: 100px;
+}
+.progress-bar {
+  height: 20%;
+  width: 100%;
+  background-color: var(--highlight);
+  border-radius: 100px;
+}
+.names {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.names > h2 {
+  font-size: 32px;
+}
+
+.stack-desc p {
+  font-size: 24px;
+  color: var(--grey);
+}
+
+#html,
+#js,
+#reactjs,
+#reactnative,
+#figma {
+  cursor: pointer;
+  color: var(--darkgrey);
+}
+
 /* Animations */
 
 /* Bounce animation */

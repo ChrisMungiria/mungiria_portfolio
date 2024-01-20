@@ -57,3 +57,43 @@ document
   .addEventListener("click", function () {
     document.querySelector("#stacks").scrollIntoView({ behavior: "smooth" });
   });
+
+const stacks = {
+  html: "I have experience in building HTML/CSS web applications. From using HTML semantics, to CSS selectors and media queries, I am comfortable around web development.I have also taken to TailwindCSS since it reduces thinking time for class names😅.",
+  js: "Using JavaScript to interact with the browser elements, using event listeners which involves creating custom functions which run when the user interacts with page elements has helped me add functionality to web pages",
+  reactjs:
+    "ReactJS is a JavaScript framework that uses the power of JavaScript to create JSX code. I have been able to make component-based and modular web applications using this which has reduced development time drastically",
+  reactnative:
+    "React Native is a library built on the concepts of ReactJS. It is similar to Google’s Flutter, allowing one codebase to run on multiple devices. I have built some projects on React Native as an Expo managed project, including a fun IoT one😉",
+  figma:
+    "Not so much a tech stack but a platform I use to develop websites and applications. I am familiar with the various tools on the platform, to create designs to guide me through th development process.",
+};
+
+const stackItems = ["html", "js", "reactjs", "reactnative", "figma"];
+const progressBar = document.querySelector(".progress-bar");
+
+stackItems.forEach((item) => {
+  document.getElementById(item).addEventListener("click", function () {
+    // Remove the white colour on all stack items
+    stackItems.forEach(
+      (item) =>
+        (document.getElementById(item).style.color = "rgba(255, 255, 255, 0.5)")
+    );
+    // Add the white colour to the clicked stack item
+    this.style.color = "white";
+
+    document.querySelector(".stack-desc p").innerHTML = stacks[item];
+    // Increase or decrease the height of the progress bar
+    if (item === "html") {
+      progressBar.style.height = "20%";
+    } else if (item === "js") {
+      progressBar.style.height = "40%";
+    } else if (item === "reactjs") {
+      progressBar.style.height = "60%";
+    } else if (item === "reactnative") {
+      progressBar.style.height = "80%";
+    } else if (item === "figma") {
+      progressBar.style.height = "100%";
+    }
+  });
+});
