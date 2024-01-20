@@ -362,6 +362,58 @@ section#stacks > h1 > span {
   color: var(--darkgrey);
 }
 
+/* Projects section */
+section#projects {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  position: relative;
+}
+section#projects > h1 {
+  font-size: 64px;
+  color: var(--grey);
+}
+section#projects > h1 > span {
+  color: var(--highlight);
+}
+
+.selector-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  height: fit-content;
+  margin-top: 50px;
+}
+
+.selector {
+  color: white;
+  padding: 5px 20px;
+  border-radius: 200px;
+  cursor: pointer;
+}
+
+.active-selector {
+  border: 1px solid var(--highlight);
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: 10px auto;
+  padding: 4px;
+  gap: 10px;
+}
+
+.project {
+  flex: 0 1 300px;
+  height: 250px;
+  background-color: var(--secondary);
+  border-radius: 10px;
+}
+
 /* Animations */
 
 /* Bounce animation */
