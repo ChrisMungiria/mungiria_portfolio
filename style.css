@@ -34,7 +34,6 @@ section {
 
 /* The navbar sticks to the top of the screen */
 nav {
-  border: 1px solid red;
   padding: 10px 50px;
   position: fixed;
   width: 100%;
@@ -43,6 +42,13 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: rgba(
+    37,
+    37,
+    37,
+    0.174
+  ); /* Add a semi-transparent white background */
+  backdrop-filter: blur(10px); /* Blur the content behind the navbar */
 }
 
 /* Style the link logo */
@@ -100,14 +106,12 @@ nav {
   padding: 0 20px;
   border-radius: 200px;
   border: 1px solid var(--grey);
-  height: 60px;
+  height: 50px;
   position: relative;
 }
 
 .download:hover {
-  background-color: var(--grey);
-  color: var(--background);
-  transition: all 0.3s ease-in-out;
+  text-decoration: underline;
 }
 
 /* Grid background container */
@@ -115,6 +119,7 @@ nav {
   position: relative;
   height: 100%;
   width: 100%;
+  min-width: 100vw;
   background-color: var(--background);
 }
 
@@ -144,4 +149,78 @@ nav {
     #000 70%,
     transparent 100%
   );
+}
+
+.hero-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.left,
+.right {
+  display: flex;
+  padding: 0 50px;
+}
+.left {
+  flex: 3;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left > h1 {
+  font-size: 64px;
+  color: var(--grey);
+}
+.left > h1 > span {
+  display: block;
+  text-wrap: nowrap;
+  color: var(--highlight);
+}
+.left > p {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--highlight);
+}
+.btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.btn {
+  border-radius: 10px;
+  padding: 10px 40px;
+  border: none;
+  font-weight: 600;
+  color: var(--background);
+}
+
+.btn-contact {
+  background-color: var(--grey);
+}
+
+.btn-projects {
+  background-color: var(--highlight);
+}
+
+.right {
+  flex: 2;
+  align-items: center;
+  justify-content: center;
+}
+.img-container {
+  height: 600px;
+  width: 361px;
+  background: linear-gradient(180deg, #abc241 0%, rgba(171, 194, 65, 0) 100%);
+  border-radius: 113px;
+}
+.profile-image {
+  height: 100%;
+  object-fit: contain;
+  border-radius: 30px;
 }

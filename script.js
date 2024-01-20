@@ -39,3 +39,14 @@ links.forEach((link) => {
     }px`;
   });
 });
+
+window.addEventListener("scroll", function () {
+  var navbar = document.querySelector("nav");
+  if (window.scrollY > 100) {
+    navbar.style.backgroundColor = "rgba(37, 37, 37, 0.174)";
+    navbar.style.backdropFilter = "blur(10px)";
+  } else {
+    navbar.style.backgroundColor = "transparent";
+    navbar.style.backdropFilter = "none";
+  }
+});
