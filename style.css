@@ -145,14 +145,3 @@ nav {
     transparent 100%
   );
 }
-
-/* Animations */
-
-@keyframes rise {
-  0% {
-    height: 0%;
-  }
-  100% {
-    height: 100%;
-  }
-}
