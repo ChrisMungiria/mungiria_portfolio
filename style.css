@@ -404,7 +404,7 @@ section#projects > h1 > span {
 
 .project {
   flex: 0 1 300px;
-  height: 250px;
+  height: 270px;
   background-color: var(--secondary);
   border-radius: 10px;
   padding: 10px;
@@ -700,6 +700,7 @@ form input[type="submit"] {
 @media (max-width: 856px) {
   section#projects {
     overflow-y: scroll;
+    padding: 50px;
   }
   section#projects > h1 {
     font-size: 32px;
