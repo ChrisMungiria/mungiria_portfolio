@@ -29,6 +29,7 @@ section {
   height: 100vh;
   background-color: var(--background);
   min-width: 1440px;
+  position: relative;
 }
 
 /* The navbar sticks to the top of the screen */
@@ -63,9 +64,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   border: 1px solid var(--grey);
-  width: 30%;
   height: 60px;
-  width: 33.33333333333333vw;
   border-radius: 200px;
   padding: 5px;
   position: relative;
@@ -598,5 +597,30 @@ form input[type="submit"] {
   }
   .download {
     display: none;
+  }
+}
+
+/* Hero Section */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse;
+  }
+  .img-container {
+    margin-top: 200px;
+    width: 192.801px;
+    height: 320px;
+  }
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .left > h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .btn-container {
+    flex-direction: column;
+    gap: 10px;
   }
 }
