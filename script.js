@@ -110,6 +110,11 @@ const reactjsSelector = document.getElementById("reactjs-selector");
 const reactnativeSelector = document.getElementById("reactnative-selector");
 
 allSelector.addEventListener("click", function () {
+  // Remove tha active class
+  reactjsSelector.classList.remove("active-selector");
+  reactnativeSelector.classList.remove("active-selector");
+  // Add the active class
+  allSelector.classList.add("active-selector");
   // ReactJS Projects
   const reactjsProjects = projects.reactjs;
   reactjsProjects.forEach((project) => {
@@ -125,6 +130,11 @@ allSelector.addEventListener("click", function () {
 });
 
 reactjsSelector.addEventListener("click", function () {
+  // Remove tha active class
+  allSelector.classList.remove("active-selector");
+  reactnativeSelector.classList.remove("active-selector");
+  // Add the active class
+  reactjsSelector.classList.add("active-selector");
   // ReactJS Projects
   const reactjsProjects = projects.reactjs;
   reactjsProjects.forEach((project) => {
@@ -140,6 +150,11 @@ reactjsSelector.addEventListener("click", function () {
 });
 
 reactnativeSelector.addEventListener("click", function () {
+  // Remove tha active class
+  allSelector.classList.remove("active-selector");
+  reactjsSelector.classList.remove("active-selector");
+  // Add the active class
+  reactnativeSelector.classList.add("active-selector");
   // ReactJS Projects
   const reactjsProjects = projects.reactjs;
   reactjsProjects.forEach((project) => {
@@ -151,5 +166,21 @@ reactnativeSelector.addEventListener("click", function () {
   reactnativeProjects.forEach((project) => {
     // Set the display of the project to block
     document.getElementById(project).style.display = "block";
+  });
+});
+
+const contacts = ["email", "linkedin", "call", "github"];
+
+contacts.forEach((contact) => {
+  document.getElementById(contact).addEventListener("click", function () {
+    if (contact === "email") {
+      window.open("mailto: mungiria01@gmail.com");
+    } else if (contact === "linkedin") {
+      window.open("https://www.linkedin.com/in/christopher-mungiria/");
+    } else if (contact === "call") {
+      window.open("tel:+254 702 518 963");
+    } else if (contact === "github") {
+      window.open("https://github.com/ChrisMungiria/");
+    }
   });
 });
