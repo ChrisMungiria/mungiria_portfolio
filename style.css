@@ -27,9 +27,8 @@ a {
 /* Each section takes up the whole screen */
 section {
   height: 100vh;
-  width: 100vw;
   background-color: var(--background);
-  /* border: 1px solid red; */
+  min-width: 1440px;
 }
 
 /* The navbar sticks to the top of the screen */
@@ -582,5 +581,22 @@ form input[type="submit"] {
   100% {
     opacity: 0;
     transform: translateY(-100%);
+  }
+}
+
+/* Media Queries */
+
+/* Navbar */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .links {
+    display: none;
+  }
+  .download {
+    display: none;
   }
 }
