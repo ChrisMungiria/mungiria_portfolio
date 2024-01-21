@@ -383,7 +383,6 @@ section#projects > h1 > span {
   justify-content: space-between;
   width: 30%;
   height: fit-content;
-  margin-top: 50px;
 }
 
 .selector {
@@ -412,6 +411,53 @@ section#projects > h1 > span {
   height: 250px;
   background-color: var(--secondary);
   border-radius: 10px;
+  padding: 10px;
+}
+
+.project > img {
+  display: flex;
+  width: 90%;
+  margin: 0px auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project > h3 {
+  font-size: 24px;
+  color: var(--grey);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags span {
+  font-size: 12px;
+  border: 1px solid var(--highlight);
+  padding: 2px 8px;
+  color: var(--grey);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.project-image-container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.project-image-container > img {
+  width: 80%;
+  margin-left: -140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Remove the margin on the first image */
+.project-image-container > img:first-child {
+  margin-left: 0;
 }
 
 /* Animations */
