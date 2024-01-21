@@ -97,3 +97,59 @@ stackItems.forEach((item) => {
     }
   });
 });
+
+// Projects
+
+const projects = {
+  reactjs: ["car-showcase", "expense-tracker", "image-gallery"],
+  reactnative: ["greenleaf", "live-score", "recipe-app"],
+};
+
+const allSelector = document.getElementById("all-selector");
+const reactjsSelector = document.getElementById("reactjs-selector");
+const reactnativeSelector = document.getElementById("reactnative-selector");
+
+allSelector.addEventListener("click", function () {
+  // ReactJS Projects
+  const reactjsProjects = projects.reactjs;
+  reactjsProjects.forEach((project) => {
+    // Set the display of the project to block
+    document.getElementById(project).style.display = "block";
+  });
+  // ReatNative Projects
+  const reactnativeProjects = projects.reactnative;
+  reactnativeProjects.forEach((project) => {
+    // Set the display of the project to block
+    document.getElementById(project).style.display = "block";
+  });
+});
+
+reactjsSelector.addEventListener("click", function () {
+  // ReactJS Projects
+  const reactjsProjects = projects.reactjs;
+  reactjsProjects.forEach((project) => {
+    // Set the display of the project to block
+    document.getElementById(project).style.display = "block";
+  });
+  // ReatNative Projects
+  const reactnativeProjects = projects.reactnative;
+  reactnativeProjects.forEach((project) => {
+    // Set the display of the project to none
+    document.getElementById(project).style.display = "none";
+  });
+});
+
+reactnativeSelector.addEventListener("click", function () {
+  // ReactJS Projects
+  const reactjsProjects = projects.reactjs;
+  reactjsProjects.forEach((project) => {
+    // Set the display of the project to none
+    document.getElementById(project).style.display = "none";
+  });
+  // ReatNative Projects
+  const reactnativeProjects = projects.reactnative;
+  reactnativeProjects.forEach((project) => {
+    // Set the display of the project to block
+    document.getElementById(project).style.display = "block";
+  });
+});
