@@ -184,3 +184,7 @@ contacts.forEach((contact) => {
     }
   });
 });
+
+function openMail() {
+  window.open("mailto: mungiria01@gmail.com");
+}
